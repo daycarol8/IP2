@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ListagemEventosController">
+   <children>
+      <Label layoutX="184.0" layoutY="33.0" prefHeight="35.0" prefWidth="232.0" text="listagem ofertas">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableOfertas" layoutX="43.0" layoutY="146.0" prefHeight="200.0" prefWidth="494.0">
+        <columns>
+          <TableColumn fx:id="produtoColumn" prefWidth="180.0" text="Produto" />
+          <TableColumn fx:id="precoColumn" prefWidth="151.3333740234375" text="Preço" />
+            <TableColumn fx:id="lojaColumn" prefWidth="162.0" text="Loja" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="dataInputListagem" layoutX="43.0" layoutY="99.0" />
+      <Label layoutX="43.0" layoutY="63.0" prefHeight="35.0" prefWidth="101.0" text="insira uma data" />
+      <Button fx:id="pesquisarButton" layoutX="238.0" layoutY="99.0" mnemonicParsing="false" onAction="#pesquisarOfertas" text="pesquisar" />
+      <Button fx:id="telaInsercaoButton" layoutX="469.0" layoutY="38.0" mnemonicParsing="false" onAction="#irTelaInsercao" text="tela de inserção" />
+   </children>
+</AnchorPane>
